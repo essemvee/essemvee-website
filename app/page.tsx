@@ -1,65 +1,95 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="bg-gray-950 text-white">
+      {/* Hero */}
+      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="https://stockcake.com/i/global-network-visualization_831973_966386/large"
+          alt="Global Digital Network"
+          fill
+          className="object-cover brightness-40"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 px-6 max-w-5xl"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white">
+            Global IT Consulting Excellence<br />
+            Delivered from Ireland to the World
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl mb-12 text-gray-300">
+            Senior expertise • EU compliant • Worldwide delivery
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          <Link
+            href="https://clockhash.com/your-solution-partner/meeting"
             target="_blank"
-            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-blue-800 to-teal-700 text-white px-16 py-8 rounded-lg text-2xl font-bold hover:from-blue-700 hover:to-teal-600 transition-all shadow-2xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Book Free Consultation
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-32 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-5xl font-bold mb-20">Our Core Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <Link href="/services/cloud-engineering">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-blue-900/60 to-teal-900/60 p-12 rounded-2xl shadow-2xl hover:shadow-teal-600/40 transition-all duration-500 border border-blue-800/40 cursor-pointer"
+              >
+                <h3 className="text-3xl font-bold mb-6">Cloud Engineering</h3>
+                <p className="text-gray-300 mb-8">Multi-cloud architecture & migration</p>
+                <span className="text-teal-400 font-semibold">View Details →</span>
+              </motion.div>
+            </Link>
+
+            <Link href="/services/devops-automation">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-indigo-900/60 to-blue-900/60 p-12 rounded-2xl shadow-2xl hover:shadow-indigo-600/40 transition-all duration-500 border border-indigo-800/40 cursor-pointer"
+              >
+                <h3 className="text-3xl font-bold mb-6">DevOps & Automation</h3>
+                <p className="text-gray-300 mb-8">CI/CD & reliability engineering</p>
+                <span className="text-indigo-400 font-semibold">View Details →</span>
+              </motion.div>
+            </Link>
+
+            <Link href="/services/ai-mlops">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-purple-900/60 to-indigo-900/60 p-12 rounded-2xl shadow-2xl hover:shadow-purple-600/40 transition-all duration-500 border border-purple-800/40 cursor-pointer"
+              >
+                <h3 className="text-3xl font-bold mb-6">AI & MLOps</h3>
+                <p className="text-gray-300 mb-8">Production AI/ML governance</p>
+                <span className="text-purple-400 font-semibold">View Details →</span>
+              </motion.div>
+            </Link>
+
+            <Link href="/services/business-analysis">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-teal-900/60 to-cyan-900/60 p-12 rounded-2xl shadow-2xl hover:shadow-cyan-600/40 transition-all duration-500 border border-teal-800/40 cursor-pointer"
+              >
+                <h3 className="text-3xl font-bold mb-6">Business Analysis & Agile</h3>
+                <p className="text-gray-300 mb-8">Transformation & alignment</p>
+                <span className="text-cyan-400 font-semibold">View Details →</span>
+              </motion.div>
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
