@@ -18,7 +18,7 @@ export default function AIMLOpsPage() {
           AI & MLOps
         </motion.h1>
         <motion.p {...fadeInUp} className="text-xl text-gray-300 text-center mb-20 max-w-4xl mx-auto">
-          Enterprise AI/ML production pipelines with governance and global deployment.
+          Enterprise AI/ML Production Pipelines With Governance And Global Deployment.
         </motion.p>
 
         <motion.div {...fadeInUp} className="mb-20">
@@ -33,20 +33,20 @@ export default function AIMLOpsPage() {
           <motion.div {...fadeInUp}>
             <h2 className="text-3xl font-bold mb-8">Advanced Capabilities</h2>
             <ul className="space-y-4 text-lg text-gray-300">
-              <li>• End-to-end MLOps pipelines</li>
-              <li>• Model training & optimisation</li>
-              <li>• Real-time inference</li>
-              <li>• Drift detection & retraining</li>
-              <li>• AI ethics & compliance</li>
+              <li>• End-to-end MLOps Pipelines</li>
+              <li>• Model Training & Optimisation</li>
+              <li>• Real-Time Inference</li>
+              <li>• Drift Detection & Retraining</li>
+              <li>• AI Ethics & Compliance</li>
             </ul>
           </motion.div>
           <motion.div {...fadeInUp}>
             <h2 className="text-3xl font-bold mb-8">Global Delivery</h2>
             <ul className="space-y-4 text-lg text-gray-300">
-              <li>• Multi-region model serving</li>
-              <li>• 24/7 model monitoring</li>
-              <li>• International data governance</li>
-              <li>• Scalable AI infrastructure</li>
+              <li>• Multi-Region Model Serving</li>
+              <li>• 24/7 Model Monitoring</li>
+              <li>• International Data Governance</li>
+              <li>• Scalable AI Infrastructure</li>
             </ul>
           </motion.div>
         </div>

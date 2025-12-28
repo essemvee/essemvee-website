@@ -72,7 +72,8 @@ export default function HomePage() {
                 className="bg-gradient-to-br from-purple-900/60 to-indigo-900/60 p-12 rounded-2xl shadow-2xl hover:shadow-purple-600/40 transition-all duration-500 border border-purple-800/40 cursor-pointer"
               >
                 <h3 className="text-3xl font-bold mb-6">AI & MLOps</h3>
-                <p className="text-gray-300 mb-8">Production AI/ML governance</p>
+                <p className="text-gray-300 mb-8">Production AI/ML pipeline,Model Training,Interfence</p>
+                <p className="text-gray-300 mb-8">Governance and Global Deployment</p>
                 <span className="text-purple-400 font-semibold">View Details →</span>
               </motion.div>
             </Link>
