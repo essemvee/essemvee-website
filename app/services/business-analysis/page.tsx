@@ -21,13 +21,6 @@ export default function BusinessAnalysisPage() {
           Global agile transformation and business-technology alignment for enterprise success.
         </motion.p>
 
-        <motion.div {...fadeInUp} className="mb-20">
-          <img 
-            src="https://cdn.dribbble.com/users/1186261/screenshots/6431382/agile_scrum_process_animated.gif" 
-            alt="Live Animated Scrum Process Cycle" 
-            className="rounded-3xl shadow-2xl mx-auto border border-gray-800 w-full max-w-4xl"
-          />
-        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div {...fadeInUp}>

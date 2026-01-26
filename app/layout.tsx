@@ -34,12 +34,8 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-black text-white py-10 text-center">
-          <p className="text-sm">
-            © 2025 ESSEMVEE Technologies Ltd<br />
-            Flat 2, 5 Buckingham Street Lower, Dublin, D01 YX52, Ireland<br />
-            Phone: +353 87 478 0667
-          </p>
+        <footer className="py-12 bg-gray-950 border-t border-gray-800 text-center text-gray-500">
+          <p>© 2025 ESSEMVEE Technologies Ltd</p>
         </footer>
       </body>
     </html>

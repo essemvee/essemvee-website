@@ -21,14 +21,6 @@ export default function CloudEngineeringPage() {
           Enterprise multi-cloud architecture, migration, and optimisation for global clients.
         </motion.p>
 
-        <motion.div {...fadeInUp} className="mb-20">
-          <img 
-            src="https://cdn.dribbble.com/users/1095673/screenshots/5678238/cloud_computing.gif" 
-            alt="Live Animated Cloud Flow" 
-            className="rounded-3xl shadow-2xl mx-auto border border-gray-800 w-full max-w-4xl"
-          />
-        </motion.div>
-
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div {...fadeInUp}>
             <h2 className="text-3xl font-bold mb-8">Core Capabilities</h2>

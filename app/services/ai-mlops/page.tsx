@@ -21,14 +21,6 @@ export default function AIMLOpsPage() {
           Enterprise AI/ML Production Pipelines With Governance And Global Deployment.
         </motion.p>
 
-        <motion.div {...fadeInUp} className="mb-20">
-          <img 
-            src="https://cdn.dribbble.com/users/2117297/screenshots/14819283/media/9a9c5f8e8f8f8f8f8f8f8f8f8f8f8f8f.gif" 
-            alt="Live Animated AI Neural Network Training" 
-            className="rounded-3xl shadow-2xl mx-auto border border-gray-800 w-full max-w-4xl"
-          />
-        </motion.div>
-
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div {...fadeInUp}>
             <h2 className="text-3xl font-bold mb-8">Advanced Capabilities</h2>

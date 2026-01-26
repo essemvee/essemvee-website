@@ -21,14 +21,6 @@ export default function DevOpsPage() {
           Enterprise CI/CD pipelines and automation for continuous delivery at global scale.
         </motion.p>
 
-        <motion.div {...fadeInUp} className="mb-20">
-          <img 
-            src="https://cdn.dribbble.com/users/5031392/screenshots/15604058/media/5d7b47c5d17f5d8c8d8f8e9f8f8f8f8f.gif" 
-            alt="Live Animated CI/CD Pipeline" 
-            className="rounded-3xl shadow-2xl mx-auto border border-gray-800 w-full max-w-4xl"
-          />
-        </motion.div>
-
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div {...fadeInUp}>
             <h2 className="text-3xl font-bold mb-8">Core Expertise</h2>
