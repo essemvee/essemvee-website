@@ -2,109 +2,221 @@
 
 import Link from 'next/link';
 
+const CALENDLY_URL = 'https://calendly.com/mohammed-essemvee/30min';
+
 export default function AboutPage() {
   return (
-    <main className="py-24 bg-gray-950 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-5xl font-bold text-center mb-20">About ESSEMVEE Technologies Ltd</h1>
+    <main className="bg-black text-white">
 
-        <section className="mb-32">
-          <h2 className="text-4xl font-bold text-center mb-12">Your Trusted Partner for Enterprise IT Consulting</h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-4xl mx-auto">
-            Whether you are a business seeking senior IT expertise or a technology professional looking for the right opportunity, ESSEMVEE Technologies Ltd delivers solutions to help you achieve your goals.
-          </p>
-          <p className="text-lg text-gray-300 mb-8">
-            Servicing enterprises across Europe, North America, Asia, and the MENA region including Gulf countries, ESSEMVEE Technologies Ltd is a leading provider of senior-level IT consulting services. Headquartered in Dublin, Ireland, we combine Irish EU compliance with a distributed global delivery team to resolve enterprise challenges in Cloud, DevOps, AI, and Agile domains.
-          </p>
-          <p className="text-lg text-gray-300 mb-8">
-            We make sure businesses find the right senior talent, consultants work with competitive global projects, and organizations achieve sustainable growth through technology.
-          </p>
-          <p className="text-lg text-gray-300">
-            With over 10 years of combined senior experience in enterprise implementations, application development, architecture, and value management, we deliver seamless solutions to clients worldwide.
-          </p>
-        </section>
+      {/* ================= HERO ================= */}
+      <section className="pt-28 pb-32 bg-gradient-to-b from-[#050B1A] to-black">
+        <div className="max-w-7xl mx-auto px-6 text-center">
 
-        <section className="mb-32">
-          <h2 className="text-4xl font-bold text-center mb-12">Empowering You with Continual Growth</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            In an industry crowded with providers, choosing the right senior consulting partner can be challenging. ESSEMVEE Technologies Ltd has proven expertise in delivering senior consultants who understand your business first-hand, speak your language, and provide strategic value.
-          </p>
-          <p className="text-lg text-gray-300 mb-8">
-            Our customer-centric approach focuses on your business objectives, ensuring collaborative, mutually beneficial partnerships that drive growth and innovation.
-          </p>
-          <p className="text-lg text-gray-300">
-            Our senior consultants arrive wherever and whenever your business needs them, meeting deadlines and delivering measurable results.
-          </p>
-        </section>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            About ESSEMVEE Technologies Ltd
+          </h1>
 
-        <section className="mb-32">
-          <h2 className="text-4xl font-bold text-center mb-12">Tailored Enterprise Solutions</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            No matter the industry, we provide superior, technology-driven IT consulting in a seamless, cost-effective, and efficient manner. Our high-quality enterprise solutions open new opportunities by improving performance and accelerating time to market.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Your trusted partner for enterprise IT consulting — delivering
+            senior expertise, global delivery, and measurable business outcomes.
           </p>
-          <p className="text-lg text-gray-300">
-            Our team is equipped to design, implement, integrate, and support Cloud architectures, DevOps pipelines, AI/ML systems, and Agile transformations — always with senior expertise and global delivery.
-          </p>
-        </section>
 
-        <section className="mb-32">
-          <h2 className="text-4xl font-bold text-center mb-12">Why ESSEMVEE Technologies</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+        </div>
+      </section>
+
+      {/* ================= INTRO ================= */}
+      <section className="py-28 bg-black">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+
+          <p className="text-lg text-gray-400 leading-relaxed max-w-4xl mx-auto">
+            Whether you are a business seeking senior IT expertise or a
+            technology professional looking for the right opportunity,
+            <strong className="text-white"> ESSEMVEE Technologies Ltd </strong>
+            delivers solutions to help you achieve your goals.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ================= WHO WE ARE ================= */}
+      <section className="py-32 bg-[#050B1A]">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Who We Are
+          </h2>
+
+          <p className="text-lg text-gray-400 leading-relaxed max-w-5xl mx-auto text-center">
+            Servicing enterprises across Europe, North America, Asia, and the
+            MENA region — including Gulf countries — ESSEMVEE Technologies Ltd
+            is a leading provider of senior-level IT consulting services.
+            <br /><br />
+            Headquartered in Dublin, Ireland, we combine Irish EU compliance
+            with a distributed global delivery model to resolve complex
+            enterprise challenges across Cloud, DevOps, AI, and Agile domains.
+            <br /><br />
+            We ensure businesses access the right senior talent, consultants
+            engage with competitive global projects, and organizations achieve
+            sustainable growth through technology.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ================= EXPERIENCE ================= */}
+      <section className="py-28 bg-black">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+
+          <h2 className="text-4xl font-bold mb-12">
+            Proven Senior Experience
+          </h2>
+
+          <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+            With over <strong className="text-white">10 years of combined senior experience </strong>
+            across enterprise implementations, application development,
+            architecture, and value management, we deliver seamless,
+            production-ready solutions to clients worldwide.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ================= VALUE PROPOSITION ================= */}
+      <section className="py-32 bg-[#050B1A]">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center mb-20">
+            Empowering You with Continual Growth
+          </h2>
+
+          <p className="text-lg text-gray-400 max-w-5xl mx-auto text-center mb-20">
+            In an industry crowded with providers, choosing the right senior
+            consulting partner is critical. ESSEMVEE Technologies Ltd delivers
+            proven expertise through consultants who understand your business,
+            speak your language, and provide real strategic value.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-10">
+
+            <div className="p-10 rounded-3xl bg-gradient-to-b from-blue-900 to-blue-700 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-4">Customer-Centric</h3>
+              <p className="text-gray-200">
+                Our approach focuses on your business objectives, ensuring
+                collaborative partnerships that drive innovation and growth.
+              </p>
+            </div>
+
+            <div className="p-10 rounded-3xl bg-gradient-to-b from-indigo-900 to-indigo-700 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-4">Senior On-Demand</h3>
+              <p className="text-gray-200">
+                Our senior consultants arrive wherever and whenever your
+                business needs them — delivering results without delays.
+              </p>
+            </div>
+
+            <div className="p-10 rounded-3xl bg-gradient-to-b from-teal-900 to-teal-700 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-4">Measurable Outcomes</h3>
+              <p className="text-gray-200">
+                We meet deadlines, manage risk, and deliver tangible,
+                measurable value at every stage.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHY ESSEMVEE ================= */}
+      <section className="py-32 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center mb-20">
+            Why ESSEMVEE Technologies
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto text-gray-300">
+
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-teal-400">Cost-Effective</h3>
-              <ul className="space-y-4 text-lg text-gray-300">
-                <li>• Clients can save 30–40% while accessing senior global talent</li>
+              <h3 className="text-2xl font-bold mb-6">Cost-Effective</h3>
+              <ul className="space-y-3">
+                <li>• Save 30–40% while accessing senior global talent</li>
                 <li>• Focus on core business while we handle expertise delivery</li>
-                <li>• Flexible engagement models more cost-effective than permanent hires</li>
-                <li>• Proven track record of delivery within agreed timelines and budgets</li>
+                <li>• Flexible engagement models vs permanent hires</li>
+                <li>• Proven delivery within agreed timelines and budgets</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-teal-400">Risk-Free Guaranteed Delivery</h3>
-              <ul className="space-y-4 text-lg text-gray-300">
-                <li>• Transparent milestones and senior oversight</li>
-                <li>• Best-practice methodologies for high-quality outcomes</li>
-                <li>• Timely project delivery guaranteed</li>
-                <li>• Ongoing post-delivery support for smooth operations</li>
+              <h3 className="text-2xl font-bold mb-6">Risk-Free Guaranteed Delivery</h3>
+              <ul className="space-y-3">
+                <li>• Transparent milestones with senior oversight</li>
+                <li>• Best-practice methodologies</li>
+                <li>• Guaranteed timely project delivery</li>
+                <li>• Ongoing post-delivery support</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-teal-400">Better Talent Pool</h3>
-              <ul className="space-y-4 text-lg text-gray-300">
-                <li>• Senior consultants with 10+ years enterprise experience</li>
-                <li>• Deep knowledge in Cloud, DevOps, AI/ML, and Agile</li>
-                <li>• Strong communication and stakeholder management</li>
+              <h3 className="text-2xl font-bold mb-6">Better Talent Pool</h3>
+              <ul className="space-y-3">
+                <li>• Senior consultants with 10+ years experience</li>
+                <li>• Expertise in Cloud, DevOps, AI/ML, and Agile</li>
+                <li>• Strong stakeholder and communication skills</li>
                 <li>• Proven ability to exceed expectations</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-teal-400">Global Delivery Strategy</h3>
-              <ul className="space-y-4 text-lg text-gray-300">
-                <li>• Interface with EU-based leadership</li>
-                <li>• Leverage distributed senior team for 24/7 operations</li>
-                <li>• Best of Irish compliance and global talent</li>
-                <li>• Full GDPR and international standards</li>
+              <h3 className="text-2xl font-bold mb-6">Global Delivery Strategy</h3>
+              <ul className="space-y-3">
+                <li>• EU-based leadership interface</li>
+                <li>• Distributed senior team for 24/7 operations</li>
+                <li>• Irish compliance with global talent</li>
+                <li>• Full GDPR & international standards</li>
               </ul>
             </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-32">
-          <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
-          <p className="text-lg text-gray-300 text-center max-w-4xl mx-auto">
-            Financial Services • Healthcare & Life Sciences • Manufacturing • Retail • Technology • Telecommunications • Public Sector • Energy & Utilities • Aerospace & Defense • Logistics • Consumer Products
-          </p>
-        </section>
+      {/* ================= INDUSTRIES ================= */}
+      <section className="py-28 bg-[#050B1A]">
+        <div className="max-w-6xl mx-auto px-6 text-center">
 
-        <section className="text-center">
-          <p className="text-lg text-gray-300 mb-12">
-            Our four-fold strengths of expertise, agility, quality, and global reach enable us to empower your business goals.
+          <h2 className="text-4xl font-bold mb-10">
+            Industries We Serve
+          </h2>
+
+          <p className="text-lg text-gray-400">
+            Financial Services • Healthcare & Life Sciences • Manufacturing •
+            Retail • Technology • Telecommunications • Public Sector •
+            Energy & Utilities • Aerospace & Defense • Logistics • Consumer Products
           </p>
-          <Link href="https://clockhash.com/your-solution-partner/meeting" target="_blank" className="inline-block bg-gradient-to-r from-blue-800 to-teal-700 text-white px-20 py-10 rounded-lg text-3xl font-bold hover:from-blue-700 hover:to-teal-600 transition shadow-2xl">
-            Book a Free Consultation
-          </Link>
-        </section>
-      </div>
+
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="py-32 bg-gradient-to-r from-blue-900 to-teal-800 text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          Let’s Build Sustainable Growth Together
+        </h2>
+
+        <p className="text-lg text-gray-200 mb-10 max-w-3xl mx-auto">
+          Our four-fold strengths of expertise, agility, quality, and global
+          reach enable us to empower your business goals.
+        </p>
+
+        <Link
+          href={CALENDLY_URL}
+          target="_blank"
+          className="inline-block bg-black text-white px-16 py-6 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition"
+        >
+          Book a Free Consultation
+        </Link>
+      </section>
+
     </main>
   );
 }

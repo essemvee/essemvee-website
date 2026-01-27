@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <header className="fixed top-0 w-full bg-white shadow-lg z-50">
           <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <Link href="/" className="text-3xl font-bold text-black">ESSEMVEE</Link>
+            <Link href="/" className="text-3xl font-bold text-black">ESSEMVEE TECHNOLOGY SERVICES</Link>
             <nav className="space-x-12 text-lg">
               <Link href="/" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">Home</Link>
               <Link href="/services" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">Services</Link>
