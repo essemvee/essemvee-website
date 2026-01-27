@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import Header from './components/Header';
 import './globals.css';
-import Link from 'next/link';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'ESSEMVEE Technologies Ltd',
-  description: 'Cloud, DevOps & AI Consulting - Dublin, Ireland',
+  description:
+    'Senior-led IT consulting delivering Cloud Engineering, DevOps, AI & MLOps, and Business Analysis services globally.',
 };
 
 export default function RootLayout({
@@ -17,26 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <header className="fixed top-0 w-full bg-white shadow-lg z-50">
-          <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <Link href="/" className="text-3xl font-bold text-black">ESSEMVEE TECHNOLOGY SERVICES</Link>
-            <nav className="space-x-12 text-lg">
-              <Link href="/" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">Home</Link>
-              <Link href="/services" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">Services</Link>
-              <Link href="/about" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">About</Link>
-              <Link href="/contact" className="text-gray-800 font-semibold hover:text-blue-600 hover:underline underline-offset-8 transition-all duration-300">Contact</Link>
-            </nav>
-          </div>
-        </header>
+      <body
+        className="bg-black text-white overflow-x-hidden"
+        suppressHydrationWarning
+      >
+        {/* Global Header */}
+        <Header />
 
-        <main className="pt-24 min-h-screen">
+        {/* Page Content */}
+        <main className="pt-20">
           {children}
         </main>
-
-        <footer className="py-12 bg-gray-950 border-t border-gray-800 text-center text-gray-500">
-          <p>© 2025 ESSEMVEE Technologies Ltd</p>
-        </footer>
       </body>
     </html>
   );
