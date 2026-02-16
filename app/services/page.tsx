@@ -92,12 +92,14 @@ export default function ServicesPage() {
               </Link>
             </div>
 
-            {/* Business */}
+            {/* Business & Data Analysis */}
             <div className="p-10 rounded-3xl bg-gradient-to-b from-teal-900 to-teal-700 shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6">Business Analysis & Agile</h3>
+              <h3 className="text-2xl font-bold mb-6">Business & Data Analysis</h3>
               <p className="text-gray-200 mb-8">
-                Align strategy, requirements, and delivery through
-                structured analysis and agile execution.
+                Alignment,Intelligence,
+                Optimization,Performance
+                Mapping,Metrics,
+                Reporting.
               </p>
               <Link href="/services/business-analysis" className="text-teal-300 font-semibold">
                 Learn More →

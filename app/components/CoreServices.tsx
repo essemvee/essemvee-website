@@ -48,12 +48,11 @@ export default function CoreServices() {
             </Link>
           </div>
 
-          {/* Business Analysis */}
+          {/* Business & Data Analysis */}
           <div className="rounded-3xl p-10 bg-gradient-to-b from-teal-900 to-green-900 shadow-xl hover:scale-105 transition">
-            <h3 className="text-3xl font-bold mb-6">Business Analysis & Agile</h3>
+            <h3 className="text-3xl font-bold mb-6">Business & Data Analysis</h3>
             <p className="text-gray-200 mb-6">
-              Agile coaching, transformation programs,
-              and business–technology alignment.
+              Requirements,Mapping,Metrics,Reporting
             </p>
             <Link href="/services/business-analysis" className="text-teal-300 font-semibold">
               View Details →
