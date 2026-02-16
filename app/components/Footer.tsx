@@ -9,13 +9,11 @@ export default function Footer() {
 
         {/* BRAND */}
         <div className="md:col-span-2">
-          <Image
-            src="/branding/logo/smv-color.svg"   // Use SVG version
+
+          <img
+            src="/branding/logo/smv-color.svg"
             alt="ESSEMVEE Technology Services logo"
-            width={140}
-            height={40}
-            className="mb-6"
-            priority
+            className="mb-6 h-10 w-auto"
           />
 
           <h3 className="text-xl font-bold mb-4">
