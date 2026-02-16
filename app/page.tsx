@@ -57,6 +57,57 @@ export default function HomePage() {
             automation and continuous optimization — ESSEMVEE aligns technology
             with business goals.
           </p>
+		  <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+            From cloud architecture and DevOps automation to AI-driven systems,
+            we align technology with business goals — reliability, speed,
+            and cost efficiency.
+          </p>
+
+        </div>
+      </section>
+	  {/* ================= TRUST ================= */}
+      <section className="py-24 bg-[#050B1A]">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+
+          <h2 className="text-4xl font-bold mb-6">
+            Trusted by Engineering Leaders
+          </h2>
+
+          <p className="text-gray-400 max-w-3xl mx-auto mb-16">
+            Organizations partner with ESSEMVEE when reliability and senior
+            expertise matter.
+          </p>
+
+          {/* Logos */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center mb-20 opacity-80">
+            <div className="text-xl font-semibold text-gray-300">FinTech</div>
+            <div className="text-xl font-semibold text-gray-300">Healthcare</div>
+            <div className="text-xl font-semibold text-gray-300">SaaS</div>
+            <div className="text-xl font-semibold text-gray-300">Retail</div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="grid md:grid-cols-2 gap-12 text-left">
+            <div className="bg-black p-8 rounded-2xl border border-gray-800">
+              <p className="text-gray-300 text-lg">
+                “ESSEMVEE reduced our deployment failures by over 60% through
+                cloud-native architecture and DevOps automation.”
+              </p>
+              <p className="mt-6 font-semibold">
+                CTO — European FinTech Company
+              </p>
+            </div>
+
+            <div className="bg-black p-8 rounded-2xl border border-gray-800">
+              <p className="text-gray-300 text-lg">
+                “Senior consultants who think like owners. No hand-holding,
+                just results.”
+              </p>
+              <p className="mt-6 font-semibold">
+                Head of Engineering — Global SaaS
+              </p>
+            </div>
+          </div>
 
         </div>
       </section>
@@ -106,8 +157,10 @@ export default function HomePage() {
             <div className="rounded-3xl p-10 bg-gradient-to-b from-[#0B3C5D] to-[#06202E] shadow-2xl">
               <h3 className="text-3xl font-bold mb-6">Cloud Engineering</h3>
               <p className="text-gray-300 text-lg">
-                Multi-cloud architecture, migrations, and secure cloud-native
-                platform design.
+                We design secure and scalable multi-cloud architectures tailored to your business needs.
+                We lead seamless cloud migrations with minimal downtime and operational disruption.
+                We implement cloud-native platforms optimized for performance, resilience, and cost efficiency.
+                We ensure governance, compliance, and security best practices across your cloud environments.            
               </p>
               <Link href="/services/cloud-engineering" className="inline-block mt-8 text-cyan-400 font-semibold">
                 View Details →
@@ -118,8 +171,10 @@ export default function HomePage() {
             <div className="rounded-3xl p-10 bg-gradient-to-b from-[#1C2470] to-[#0F153F] shadow-2xl">
               <h3 className="text-3xl font-bold mb-6">DevOps & Automation</h3>
               <p className="text-gray-300 text-lg">
-                CI/CD pipelines, SRE, GitOps, reliability engineering, and
-                infrastructure automation.
+                We build automated CI/CD pipelines that accelerate development and deployment cycles.
+                We implement Site Reliability Engineering practices to improve system stability and uptime.
+                We enable GitOps-driven infrastructure for consistency, traceability, and faster rollbacks.
+                We automate infrastructure provisioning to reduce manual effort and operational risk.                
               </p>
               <Link href="/services/devops-automation" className="inline-block mt-8 text-blue-400 font-semibold">
                 View Details →
@@ -130,24 +185,75 @@ export default function HomePage() {
             <div className="rounded-3xl p-10 bg-gradient-to-b from-[#4B1C7A] to-[#2A1046] shadow-2xl">
               <h3 className="text-3xl font-bold mb-6">AI & MLOps</h3>
               <p className="text-gray-300 text-lg">
-                Production AI pipelines, model training, governance, and
-                scalable global deployments.
+                We design and deploy production-ready AI pipelines built for scalability and reliability.
+                We develop and optimize machine learning models aligned with business objectives.
+                We implement governance frameworks to ensure model transparency and compliance.
+                We enable automated monitoring and continuous improvement of AI systems in production.                
               </p>
               <Link href="/services/ai-mlops" className="inline-block mt-8 text-purple-400 font-semibold">
                 View Details →
               </Link>
             </div>
+			
+        			{/* Business & Data Analysis */}
+			        <div className="rounded-3xl p-10 bg-gradient-to-b from-[#0E3C3F] to-[#06282B] shadow-2xl">
+			          <h3 className="text-3xl font-bold mb-6">
+				          Business & Data Analysis
+			          </h3>
 
-            {/* Business Analysis */}
-            <div className="rounded-3xl p-10 bg-gradient-to-b from-[#0E3C3F] to-[#06282B] shadow-2xl">
-              <h3 className="text-3xl font-bold mb-6">Business Analysis & Agile</h3>
-              <p className="text-gray-300 text-lg">
-                Digital transformation, agile delivery, and strategic alignment
-                between business and technology.
-              </p>
-              <Link href="/services/business-analysis" className="inline-block mt-8 text-teal-400 font-semibold">
-                View Details →
-              </Link>
+			          <p className="text-gray-300 text-lg">
+                  We translate business objectives into clearly defined and measurable KPIs.
+                  We conduct structured stakeholder analysis to align technical initiatives with strategy.
+                  We map processes and identify optimization opportunities to improve operational efficiency.
+                  We design reporting frameworks and dashboards to enable data-driven decision making.                  
+				        </p>
+
+				        <Link
+				        	href="/services/business-data-analysis"
+					        className="inline-block mt-8 text-teal-400 font-semibold"
+				>
+					        View Details →
+				        </Link>
+			      </div>         
+
+          </div>
+        </div>
+      </section>
+	  {/* ================= CASE STUDIES ================= */}
+      <section className="py-24 bg-[#050B1A]">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Proven Delivery
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12">
+
+            <div className="bg-black p-8 rounded-2xl border border-gray-800">
+              <h3 className="text-2xl font-bold mb-4">Cloud Modernization</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>• 40% cost reduction</li>
+                <li>• 3× faster releases</li>
+                <li>• AWS multi-account</li>
+              </ul>
+            </div>
+
+            <div className="bg-black p-8 rounded-2xl border border-gray-800">
+              <h3 className="text-2xl font-bold mb-4">DevOps Automation</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>• 60% fewer incidents</li>
+                <li>• CI/CD & GitOps</li>
+                <li>• Kubernetes</li>
+              </ul>
+            </div>
+
+            <div className="bg-black p-8 rounded-2xl border border-gray-800">
+              <h3 className="text-2xl font-bold mb-4">AI & MLOps</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Production ML</li>
+                <li>• Automated governance</li>
+                <li>• Scalable inference</li>
+              </ul>
             </div>
 
           </div>
