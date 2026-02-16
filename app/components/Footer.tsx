@@ -13,7 +13,7 @@ export default function Footer() {
           <img
             src="/branding/logo/smv-color.svg"
             alt="ESSEMVEE Technology Services logo"
-            className="mb-6 h-10 w-auto"
+            className="mb-8 h-24 w-auto"
           />
 
           <h3 className="text-xl font-bold mb-4">
