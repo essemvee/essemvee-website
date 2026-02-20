@@ -43,7 +43,7 @@ export default function Footer() {
             </p>
 
             <Link
-              href="https://calendly.com/mohammed-essemvee/30min"
+              href="https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/"
               target="_blank"
               className="inline-block bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-full font-semibold shadow-lg"
             >

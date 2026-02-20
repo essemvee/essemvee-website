@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-const CALENDLY_URL = 'https://calendly.com/mohammed-essemvee/30min';
+const CALENDLY_URL = 'https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/';
 
 export default function ContactPage() {
   return (

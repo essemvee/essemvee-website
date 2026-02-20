@@ -26,7 +26,7 @@ export default function HomePage() {
 
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="https://calendly.com/mohammed-essemvee/30min"
+              href="https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/"
               target="_blank"
               className="bg-blue-600 hover:bg-blue-700 transition px-10 py-5 rounded-full text-lg font-semibold shadow-xl"
             >
@@ -313,7 +313,7 @@ export default function HomePage() {
         </p>
 
         <Link
-          href="https://calendly.com/mohammed-essemvee/30min"
+          href="https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/"
           target="_blank"
           className="bg-green-600 hover:bg-green-700 transition px-14 py-6 rounded-full text-xl font-bold shadow-2xl"
         >
