@@ -15,9 +15,9 @@ export default function Header() {
       <Link
         href={href}
         onClick={() => setOpen(false)}
-        className={`text-base md:text-lg font-semibold transition ${
+        className={`block py-2 text-base md:text-lg font-semibold transition ${
           isActive
-            ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
+            ? 'text-blue-600 border-b-2 border-blue-600 md:pb-1'
             : 'text-black hover:text-blue-600'
         }`}
       >
@@ -33,20 +33,18 @@ export default function Header() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3">
-            {/* SMV ICON */}
             <img
               src="/branding/logo/smv-color.png"
               alt="ESSEMVEE logo"
               className="h-8 w-auto"
             />
 
-            {/* COMPANY NAME (SEO SAFE) */}
             <span className="hidden sm:block text-lg md:text-xl font-extrabold tracking-wide text-black">
               ESSEMVEE TECHNOLOGY SERVICES
             </span>
           </Link>
 
-          {/* DESKTOP NAV */}
+          {/* DESKTOP NAVIGATION */}
           <nav className="hidden md:flex items-center gap-10">
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
@@ -68,9 +66,17 @@ export default function Header() {
               viewBox="0 0 24 24"
             >
               {open ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -79,11 +85,13 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t px-6 py-6 space-y-4">
-          {navLink('/', 'Home')}
-          {navLink('/services', 'Services')}
-          {navLink('/about', 'About')}
-          {navLink('/contact', 'Contact')}
+        <div className="md:hidden bg-white border-t px-6 py-6 transition-all duration-300">
+          <nav className="flex flex-col gap-6 text-lg">
+            {navLink('/', 'Home')}
+            {navLink('/services', 'Services')}
+            {navLink('/about', 'About')}
+            {navLink('/contact', 'Contact')}
+          </nav>
         </div>
       )}
     </header>
