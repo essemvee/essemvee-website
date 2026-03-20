@@ -16,7 +16,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-6">Dublin, Ireland · Est. 2024</p>
+          <p className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-6">Dublin, Ireland · Est. 2026</p>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-8">About ESSEMVEE</h1>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
             A senior-led engineering consultancy helping SaaS, FinTech, and enterprise teams
