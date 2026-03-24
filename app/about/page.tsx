@@ -5,6 +5,86 @@ import Image from 'next/image';
 
 const CALENDLY_URL = 'https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/';
 
+const LINKEDIN_ICON = (
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
+);
+
+// ── TEAM DATA ──────────────────────────────────────────────────────────────────
+const team = [
+  {
+    name: 'Mohammed Viquarahmed',
+    initials: 'MV',
+    photo: '/team/founder.jpg',
+    roles: ['CEO & Founder', 'Principal DevOps Consultant', 'Head of Engineering Delivery'],
+    bio: 'Mohammed is the founder and driving force behind ESSEMVEE Technology Services. A Principal DevOps Consultant with deep expertise in cloud infrastructure, CI/CD automation, and platform engineering, he has led transformation programmes for organisations across FinTech, SaaS, and enterprise sectors in Ireland and beyond.',
+    bio2: 'With a hands-on approach to every engagement, Mohammed combines technical depth with strong commercial acumen — ensuring every solution delivered is not just technically sound, but aligned with real business outcomes. Based in Dublin, he works directly with clients from first consultation through to delivery.',
+    linkedin: 'https://www.linkedin.com/in/mohammed-viquarahmed-1196501ba/',
+    accentBorder: 'border-blue-600',
+    accentBadge: 'bg-blue-950 border-blue-700 text-blue-300',
+    accentLink: 'border-blue-600 text-blue-400 hover:bg-blue-900/30',
+    avatarBg: 'bg-blue-900',
+    avatarText: 'text-blue-300',
+  },
+  {
+    name: 'Moosa Shah Syed',
+    initials: 'MS',
+    photo: null,
+    roles: ['Lead Analytics Consultant', 'Head of MLOps', 'Head of Data & Business Intelligence'],
+    bio: 'Moosa is ESSEMVEE\'s Lead Analytics Consultant and Head of MLOps — leading both the Business & Data Analysis practice and the firm\'s AI/MLOps engineering capability. He specialises in translating complex business objectives into structured KPI frameworks and production-grade ML pipelines that deliver measurable outcomes at scale.',
+    bio2: 'With a strong background spanning data strategy, model governance, stakeholder alignment, and process optimisation, Moosa leads client engagements end-to-end — from analytics discovery and KPI design through to the operationalisation of AI systems in regulated and high-growth environments.',
+    linkedin: 'https://www.linkedin.com/in/moosashah-syed/',
+    accentBorder: 'border-teal-600',
+    accentBadge: 'bg-teal-950 border-teal-700 text-teal-300',
+    accentLink: 'border-teal-600 text-teal-400 hover:bg-teal-900/30',
+    avatarBg: 'bg-teal-900',
+    avatarText: 'text-teal-300',
+  },
+  {
+    name: 'Mohammed Fazil',
+    initials: 'MF',
+    photo: null,
+    roles: ['Lead DevOps Engineer', 'Head of Automation & CI/CD'],
+    bio: 'Fazil is ESSEMVEE\'s Lead DevOps Engineer, bringing deep expertise in CI/CD pipeline architecture, infrastructure automation, GitOps workflows, and platform reliability engineering. He has a strong track record of helping engineering teams eliminate manual toil and ship faster with confidence.',
+    bio2: 'At ESSEMVEE, Fazil leads automation-heavy client engagements and is the go-to specialist for organisations looking to overhaul their delivery pipelines, reduce deployment risk, and build SRE-grade reliability into their platforms.',
+    linkedin: 'https://www.linkedin.com/in/mohammed-fazil-33a78275/',
+    accentBorder: 'border-indigo-600',
+    accentBadge: 'bg-indigo-950 border-indigo-700 text-indigo-300',
+    accentLink: 'border-indigo-600 text-indigo-400 hover:bg-indigo-900/30',
+    avatarBg: 'bg-indigo-900',
+    avatarText: 'text-indigo-300',
+  },
+  {
+    name: 'Eliyas Ahmed',
+    initials: 'EA',
+    photo: null,
+    roles: ['Lead Security Engineer', 'Head of DevSecOps'],
+    bio: 'Eliyas is ESSEMVEE\'s Lead Security Engineer and head of the DevSecOps practice. He specialises in embedding security across the full software delivery lifecycle — from shift-left vulnerability scanning and policy-as-code to zero-trust architecture and compliance automation — without compromising developer velocity.',
+    bio2: 'His work at ESSEMVEE is particularly focused on regulated industries, helping FinTech and healthcare clients achieve DORA, NIS2, and GDPR compliance readiness through security-first engineering practices designed to scale with the business.',
+    linkedin: 'https://www.linkedin.com/in/eliyas-ahmed-a0b20311b/',
+    accentBorder: 'border-cyan-600',
+    accentBadge: 'bg-cyan-950 border-cyan-700 text-cyan-300',
+    accentLink: 'border-cyan-600 text-cyan-400 hover:bg-cyan-900/30',
+    avatarBg: 'bg-cyan-900',
+    avatarText: 'text-cyan-300',
+  },
+  {
+    name: 'Mohammed Rizwan',
+    initials: 'MR',
+    photo: null,
+    roles: ['Lead Platform Engineer', 'Head of Terraform Cloud & DevOps Automation'],
+    bio: 'Rizwan is ESSEMVEE\'s Lead Platform Engineer, specialising in Terraform Cloud, infrastructure automation, and DevOps engineering. He leads the design and implementation of cloud infrastructure-as-code frameworks, automated provisioning pipelines, and platform engineering solutions that give engineering teams reliable, repeatable, and scalable foundations.',
+    bio2: 'At ESSEMVEE, Rizwan heads engagements where clients need to bring rigour and automation to their infrastructure management — moving from manual, error-prone provisioning to fully automated, policy-driven cloud operations using Terraform Cloud and modern DevOps tooling.',
+    linkedin: 'https://www.linkedin.com/in/mohammed-rizwan-09a373203/',
+    accentBorder: 'border-purple-600',
+    accentBadge: 'bg-purple-950 border-purple-700 text-purple-300',
+    accentLink: 'border-purple-600 text-purple-400 hover:bg-purple-900/30',
+    avatarBg: 'bg-purple-900',
+    avatarText: 'text-purple-300',
+  },
+];
+
 export default function AboutPage() {
   return (
     <main className="bg-black text-white">
@@ -55,86 +135,78 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= FOUNDER ================= */}
+      {/* ================= TEAM ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/images/cloud-engineering.webp" alt="Team background" fill className="object-cover opacity-10" />
           <div className="absolute inset-0 bg-[#050B1A]/92" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-6">The Team</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">The Team</h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
             ESSEMVEE engagements are delivered by senior practitioners — not escalated to them.
             Here's who you'll be working with.
           </p>
 
-          {/* FOUNDER CARD */}
-          <div className="max-w-3xl mx-auto">
-            <div className="p-8 rounded-3xl bg-black/70 border border-gray-700 backdrop-blur">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
+          <div className="flex flex-col gap-8">
+            {team.map((member) => (
+              <div
+                key={member.name}
+                className={`p-8 rounded-3xl bg-black/70 border ${member.accentBorder} backdrop-blur transition hover:bg-black/80`}
+              >
+                <div className="flex flex-col md:flex-row gap-8 items-start">
 
-                {/* PHOTO */}
-                <div className="flex-shrink-0 mx-auto md:mx-0">
-                  <div className="relative w-36 h-36 rounded-2xl overflow-hidden border-2 border-blue-600">
-                    <Image
-                      src="/team/founder.jpg"
-                      alt="Mohammed Viquarahmed - Founder & CEO"
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                </div>
-
-                {/* DETAILS */}
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-bold mb-1">Mohammed Viquarahmed</h3>
-
-                  {/* ROLES */}
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
-                    {[
-                      'CEO & Founder',
-                      'Lead Consultant',
-                      'Senior DevOps Engineer',
-                      'Sales Representative',
-                    ].map((role) => (
-                      <span
-                        key={role}
-                        className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-950 border border-blue-700 text-blue-300"
-                      >
-                        {role}
-                      </span>
-                    ))}
+                  {/* PHOTO / AVATAR */}
+                  <div className="flex-shrink-0 mx-auto md:mx-0">
+                    <div className={`relative w-28 h-28 rounded-2xl overflow-hidden border-2 ${member.accentBorder}`}>
+                      {member.photo ? (
+                        <Image
+                          src={member.photo}
+                          alt={member.name}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      ) : (
+                        <div className={`w-full h-full flex items-center justify-center ${member.avatarBg}`}>
+                          <span className={`text-2xl font-bold ${member.avatarText}`}>{member.initials}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Mohammed is the founder and driving force behind ESSEMVEE Technology Services.
-                    A Senior DevOps Engineer with deep expertise in cloud infrastructure, CI/CD automation,
-                    and platform engineering, he has delivered transformation programmes for organisations
-                    across FinTech, SaaS, and enterprise sectors in Ireland and beyond.
-                  </p>
+                  {/* DETAILS */}
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
 
-                  <p className="text-gray-400 leading-relaxed mb-6">
-                    With a hands-on approach to every engagement, Mohammed combines technical depth
-                    with a strong commercial understanding — ensuring that every solution delivered
-                    is not just technically sound, but aligned with real business outcomes.
-                    Based in Dublin, he works directly with clients from first consultation through to delivery.
-                  </p>
+                    {/* ROLE BADGES */}
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
+                      {member.roles.map((role) => (
+                        <span
+                          key={role}
+                          className={`px-3 py-1 rounded-full text-xs font-semibold border ${member.accentBadge}`}
+                        >
+                          {role}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* LINKEDIN */}
-                  <a
-                    href="https://www.linkedin.com/in/mohammed-viquarahmed"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-600 text-blue-400 hover:bg-blue-900/30 transition text-sm font-semibold"
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    Connect on LinkedIn
-                  </a>
+                    <p className="text-gray-300 leading-relaxed mb-3">{member.bio}</p>
+                    <p className="text-gray-400 leading-relaxed mb-6">{member.bio2}</p>
+
+                    {/* LINKEDIN */}
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-5 py-2 rounded-full border ${member.accentLink} transition text-sm font-semibold`}
+                    >
+                      {LINKEDIN_ICON}
+                      Connect on LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
