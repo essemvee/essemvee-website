@@ -85,6 +85,15 @@ export default function Footer() {
       <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
         © 2026 ESSEMVEE Technology Services Limited. All rights reserved.
       </div>
+      <div className="flex gap-4 text-sm text-gray-400">
+        <Link href="/terms" className="hover:text-white">
+          Terms & Conditions
+        </Link>
+
+        <Link href="/privacy-policy" className="hover:text-white">
+          Privacy Policy
+        </Link>
+      </div>
 
     </footer>
   );

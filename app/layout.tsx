@@ -3,7 +3,11 @@ import { Geist } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
+import CookieBanner from '@/components/CookieBanner';
 
+// Inside the body tag, after <Footer />:
+<Chatbot />
 const geist = Geist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -22,6 +26,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
