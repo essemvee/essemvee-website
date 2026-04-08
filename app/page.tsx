@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import TechLogos, { ALL_LOGOS } from '@/components/TechLogos';
+import CaseStudies from '@/components/CaseStudies';
 
 const CALENDLY_URL = 'https://outlook.office365.com/owa/calendar/ESSEMVEEExecutiveConsultation@NETORGFT20382626.onmicrosoft.com/bookings/';
 
@@ -124,7 +125,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ================= PROVEN RESULTS ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -151,7 +151,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      <CaseStudies />   {/* 👈 ADD HERE */}
       {/* ================= TESTIMONIALS ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
