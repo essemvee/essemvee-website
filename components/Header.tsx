@@ -31,7 +31,6 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
 
-          {/* LOGO */}
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/branding/logo/smv-color.png"
@@ -45,16 +44,14 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
           <nav className="hidden md:flex items-center gap-10">
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}        
-            
+            {navLink('/contact', 'Contact')}
+            {navLink('/case-studies', 'Case Studies')}
           </nav>
 
-          {/* MOBILE MENU BUTTON */}
           <button
             className="md:hidden text-black"
             onClick={() => setOpen(!open)}
@@ -71,14 +68,14 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t border-gray-200 px-6 py-6">
           <nav className="flex flex-col gap-6 text-lg">
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}            
+            {navLink('/contact', 'Contact')}
+            {navLink('/case-studies', 'Case Studies')}
           </nav>
         </div>
       )}
