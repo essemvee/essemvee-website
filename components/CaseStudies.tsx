@@ -1,158 +1,149 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export interface CaseStudy {
-  id: string;
-  client: string;
-  sector: string;
-  challenge: string;
-  solution: string;
-  outcome: string[];
-  tags: string[];
-  duration: string;
-  highlight: string;
-}
+// ✅ FIX 1: renamed const from `caseStudies` → `caseStudiesData` to avoid name clash with the component function below
+const caseStudiesData = [
+  {
+    id: 1,
+    slug: 'fintech-platform-transformation',
+    title: 'FinTech Platform Transformation',
+    subtitle: 'Dublin FinTech: fragile infra → fully automated, cloud-native platform',
+    industry: 'Financial Technology',
+    location: 'Dublin, Ireland',
+    duration: '24 weeks',
+    img: '/images/cloud-engineering.webp',
+    services: ['Cloud Engineering', 'DevOps & Automation', 'DevSecOps', 'Monitoring & Logging'],
+    serviceColors: ['bg-blue-900/60', 'bg-indigo-900/60', 'bg-cyan-900/60', 'bg-teal-900/60'],
+    results: ['41% cloud cost reduction', '15 deployments per day', 'PCI DSS Level 1 achieved', '87% MTTR reduction'],
+    gradient: 'from-blue-900/90 to-teal-900/90',
+  },
+  {
+    id: 2,
+    slug: 'healthcare-saas-modernisation',
+    title: 'Healthcare SaaS Modernisation',
+    subtitle: 'Cloud migration, MLOps for patient risk, and GDPR-compliant observability',
+    industry: 'Healthcare Technology',
+    location: 'Ireland & UK',
+    duration: '32 weeks',
+    img: '/images/ai-mlops.webp',
+    services: ['Cloud Engineering', 'AI & MLOps', 'DevSecOps', 'Business & Data Analysis'],
+    serviceColors: ['bg-blue-900/60', 'bg-purple-900/60', 'bg-cyan-900/60', 'bg-green-900/60'],
+    results: ['Zero-downtime Azure migration', '18% readmission reduction', 'GDPR fully compliant', '€3.4M annual savings'],
+    gradient: 'from-purple-900/90 to-blue-900/90',
+  },
+  {
+    id: 3,
+    slug: 'ecommerce-scale-up',
+    title: 'E-Commerce Scale-Up for Peak Traffic',
+    subtitle: 'Cork retailer survives Black Friday at 47x normal traffic on Kubernetes',
+    industry: 'Retail & E-Commerce',
+    location: 'Cork, Ireland',
+    duration: '20 weeks',
+    img: '/images/devops-automation.webp',
+    services: ['Cloud Engineering', 'DevOps & Automation', 'Monitoring & Logging', 'Data Analysis'],
+    serviceColors: ['bg-blue-900/60', 'bg-indigo-900/60', 'bg-teal-900/60', 'bg-green-900/60'],
+    results: ['Zero downtime on Black Friday', '47x traffic handled', '34% margin uplift', '68% faster page loads'],
+    gradient: 'from-indigo-900/90 to-cyan-900/90',
+  },
+  {
+    id: 4,
+    slug: 'enterprise-manufacturing-ai',
+    title: 'Enterprise Manufacturing AI & Security',
+    subtitle: 'IoT predictive maintenance and unified IT/OT monitoring for a manufacturer',
+    industry: 'Manufacturing & Industry',
+    location: 'Limerick, Ireland',
+    duration: '28 weeks',
+    img: '/images/devsecops.webp',
+    services: ['AI & MLOps', 'DevSecOps', 'Monitoring & Logging', 'Data Analysis'],
+    serviceColors: ['bg-purple-900/60', 'bg-cyan-900/60', 'bg-teal-900/60', 'bg-green-900/60'],
+    results: ['67% downtime reduction', 'FDA 21 CFR Part 11 passed', '€5.4M annual savings', 'Unified IT/OT visibility'],
+    gradient: 'from-cyan-900/90 to-purple-900/90',
+  },
+];
 
-interface CaseStudiesProps {
-  studies: CaseStudy[];
-  accentColor?: string; // Tailwind color key e.g. 'blue', 'purple', 'teal', 'cyan', 'indigo'
-  title?: string;
-}
-
-export default function CaseStudies({
-  studies,
-  accentColor = 'blue',
-  title = 'Client Case Studies',
-}: CaseStudiesProps) {
-  const [expanded, setExpanded] = useState<string | null>(null);
-
-  const accent = {
-    border:  `border-${accentColor}-700`,
-    hoverBorder: `hover:border-${accentColor}-500`,
-    text:    `text-${accentColor}-400`,
-    bg:      `bg-${accentColor}-950/40`,
-    tag:     `border-${accentColor}-700 text-${accentColor}-300 bg-${accentColor}-950/50`,
-    badge:   `bg-${accentColor}-600`,
-  };
-
-  const colorMap: Record<string, { border: string; hoverBorder: string; text: string; bg: string; tag: string; badge: string }> = {
-    blue:   { border: 'border-blue-700',   hoverBorder: 'hover:border-blue-500',   text: 'text-blue-400',   bg: 'bg-blue-950/40',   tag: 'border-blue-700 text-blue-300 bg-blue-950/50',   badge: 'bg-blue-600' },
-    purple: { border: 'border-purple-700', hoverBorder: 'hover:border-purple-500', text: 'text-purple-400', bg: 'bg-purple-950/40', tag: 'border-purple-700 text-purple-300 bg-purple-950/50', badge: 'bg-purple-600' },
-    teal:   { border: 'border-teal-700',   hoverBorder: 'hover:border-teal-500',   text: 'text-teal-400',   bg: 'bg-teal-950/40',   tag: 'border-teal-700 text-teal-300 bg-teal-950/50',   badge: 'bg-teal-600' },
-    cyan:   { border: 'border-cyan-700',   hoverBorder: 'hover:border-cyan-500',   text: 'text-cyan-400',   bg: 'bg-cyan-950/40',   tag: 'border-cyan-700 text-cyan-300 bg-cyan-950/50',   badge: 'bg-cyan-600' },
-    indigo: { border: 'border-indigo-700', hoverBorder: 'hover:border-indigo-500', text: 'text-indigo-400', bg: 'bg-indigo-950/40', tag: 'border-indigo-700 text-indigo-300 bg-indigo-950/50', badge: 'bg-indigo-600' },
-  };
-
-  const c = colorMap[accentColor] ?? colorMap.blue;
-
+// ✅ FIX 2: component name is CaseStudies (PascalCase) — no clash with the const above
+export default function CaseStudies() {
   return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-4">{title}</h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Real engagements. Verified results. Senior-led delivery across regulated and high-growth sectors.
-        </p>
+    <section className="py-28 bg-gradient-to-b from-[#050B1A] to-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-4">
+            Real Clients · Verified Outcomes
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Case Studies</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            End-to-end transformation programmes across FinTech, Healthcare, E-Commerce, and Manufacturing.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {studies.map((study) => {
-            const isOpen = expanded === study.id;
-            return (
-              <div
-                key={study.id}
-                className={`rounded-2xl border ${c.border} ${c.hoverBorder} transition-all duration-300 bg-black/60 backdrop-blur overflow-hidden`}
-              >
-                {/* CARD HEADER */}
-                <div className="p-7">
-                  {/* Sector badge + duration */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${c.tag}`}>
-                      {study.sector}
+          {caseStudiesData.map(({ id, slug, title, subtitle, industry, location, duration, img, services, serviceColors, results, gradient }) => (
+            <div key={id} className="rounded-3xl overflow-hidden border border-gray-800 hover:border-blue-700 transition-all duration-300 group flex flex-col bg-[#080f1e]">
+              <div className="relative h-48 flex-shrink-0">
+                <Image src={img} alt={title} fill className="object-cover group-hover:scale-105 transition duration-700" />
+                <div className={`absolute inset-0 bg-gradient-to-r ${gradient}`} />
+                <div className="absolute bottom-4 left-4 flex flex-wrap gap-1.5">
+                  {services.slice(0, 3).map((s, i) => (
+                    <span key={s} className={`px-2.5 py-1 rounded-full text-xs font-semibold text-white ${serviceColors[i]} border border-white/20 backdrop-blur`}>
+                      {s}
                     </span>
-                    <span className="text-xs text-gray-500">{study.duration}</span>
-                  </div>
-
-                  {/* Client name */}
-                  <h3 className="text-lg font-bold text-white mb-1">{study.client}</h3>
-
-                  {/* Headline stat */}
-                  <p className={`text-2xl font-extrabold ${c.text} mb-4`}>{study.highlight}</p>
-
-                  {/* Challenge preview */}
-                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
-                    {study.challenge}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-5">
-                    {study.tags.slice(0, 4).map((tag) => (
-                      <span key={tag} className="text-xs px-2 py-1 rounded border border-gray-700 text-gray-400">
-                        {tag}
-                      </span>
-                    ))}
-                    {study.tags.length > 4 && (
-                      <span className="text-xs px-2 py-1 rounded border border-gray-700 text-gray-500">
-                        +{study.tags.length - 4} more
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Toggle */}
-                  <button
-                    onClick={() => setExpanded(isOpen ? null : study.id)}
-                    className={`mt-6 text-sm font-semibold ${c.text} hover:underline flex items-center gap-1 transition`}
-                  >
-                    {isOpen ? 'Hide details ↑' : 'Read full case study ↓'}
-                  </button>
+                  ))}
+                  {services.length > 3 && (
+                    <span className="px-2.5 py-1 rounded-full text-xs font-semibold text-white bg-gray-800/70 border border-white/20 backdrop-blur">
+                      +{services.length - 3}
+                    </span>
+                  )}
                 </div>
-
-                {/* EXPANDED DETAIL */}
-                {isOpen && (
-                  <div className={`px-7 pb-7 border-t ${c.border} pt-6`}>
-                    {/* Challenge */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">
-                        The Challenge
-                      </h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">{study.challenge}</p>
-                    </div>
-
-                    {/* Solution */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">
-                        Our Approach
-                      </h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">{study.solution}</p>
-                    </div>
-
-                    {/* Outcomes */}
-                    <div>
-                      <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">
-                        Outcomes Delivered
-                      </h4>
-                      <ul className="space-y-2">
-                        {study.outcome.map((o, i) => (
-                          <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
-                            <span className={`mt-1 flex-shrink-0 w-2 h-2 rounded-full ${c.badge}`} />
-                            {o}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* All tags */}
-                    <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-gray-800">
-                      {study.tags.map((tag) => (
-                        <span key={tag} className={`text-xs px-2 py-1 rounded border ${c.tag}`}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur flex items-center justify-center text-white text-sm font-bold border border-gray-600">
+                  {id}
+                </div>
               </div>
-            );
-          })}
+
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-3">
+                  <span>🏢 {industry}</span>
+                  <span>📍 {location}</span>
+                  <span>⏱ {duration}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-5">{subtitle}</p>
+                <div className="grid grid-cols-2 gap-2 mb-6">
+                  {results.map((r) => (
+                    <div key={r} className="bg-green-950/30 border border-green-900/50 rounded-xl px-3 py-2 flex items-start gap-2">
+                      <span className="text-green-400 text-xs mt-0.5 flex-shrink-0">✓</span>
+                      <span className="text-white text-xs font-medium leading-snug">{r}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-auto">
+                  {/* ✅ FIX 3: slugs match your actual folder names on disk */}
+                  <Link
+                    href={`/case-studies/${slug}`}
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 group/btn"
+                  >
+                    Read Full Case Study
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-14">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 border border-cyan-700 hover:border-cyan-400 text-cyan-400 hover:text-cyan-300 px-10 py-4 rounded-full font-semibold transition-all duration-200"
+          >
+            View All Case Studies
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
