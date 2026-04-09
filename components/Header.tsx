@@ -48,8 +48,7 @@ export default function Header() {
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}
-            {navLink('/case-studies', 'Case Studies')}
+            {navLink('/contact', 'Contact')}ies')}
           </nav>
 
           <button
@@ -75,7 +74,6 @@ export default function Header() {
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
             {navLink('/contact', 'Contact')}
-            {navLink('/case-studies', 'Case Studies')}
           </nav>
         </div>
       )}
