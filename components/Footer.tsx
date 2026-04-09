@@ -7,8 +7,8 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-3">
 
-        {/* BRAND */}
-        <div className="md:col-span-2">
+        {/* COL 1 — BRAND */}
+        <div>
           <Image
             src="/branding/logo/smv-color.png"
             alt="ESSEMVEE Technology Services logo"
@@ -16,40 +16,32 @@ export default function Footer() {
             height={60}
             className="mb-8 h-16 w-auto"
           />
-
           <h3 className="text-xl font-bold mb-4">
             ESSEMVEE TECHNOLOGY SERVICES LIMITED
           </h3>
-
-          <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+          <p className="text-gray-400 text-sm leading-relaxed">
             Senior-led IT consulting delivering Cloud Engineering, DevOps,
             AI & MLOps, and Business & Data Analysis services globally.
           </p>
-
           <p className="text-gray-500 text-sm mt-4">
             Dublin, Ireland · Global Delivery
           </p>
+        </div>
 
-          {/* Footer nav links */}
-          <div className="flex flex-wrap gap-6 mt-8 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white transition">Home</Link>
-            <Link href="/services" className="hover:text-white transition">Services</Link>
-            <Link href="/about" className="hover:text-white transition">About</Link>
-            <Link href="/contact" className="hover:text-white transition">Contact</Link>
-          </div>
-
-          {/* Service links */}
-          <div className="flex flex-wrap gap-4 mt-4 text-xs text-gray-600">
-            <Link href="/services/cloud-engineering" className="hover:text-gray-400 transition">Cloud Engineering</Link>
-            <Link href="/services/devops-automation" className="hover:text-gray-400 transition">DevOps & Automation</Link>
-            <Link href="/services/ai-mlops" className="hover:text-gray-400 transition">AI & MLOps</Link>
-            <Link href="/services/devsecops" className="hover:text-gray-400 transition">DevSecOps</Link>
-            <Link href="/services/monitoring-logging" className="hover:text-gray-400 transition">Monitoring & Logging</Link>
-            <Link href="/services/business-data-analysis" className="hover:text-gray-400 transition">Business & Data Analysis</Link>
+        {/* COL 2 — NAV LINKS (centered) */}
+        <div className="flex flex-col items-center">
+          <div>
+            <h4 className="font-semibold text-lg mb-6 text-white">Navigation</h4>
+            <div className="flex flex-col gap-3 text-sm text-gray-400 mb-8">
+              <Link href="/" className="hover:text-white transition">Home</Link>
+              <Link href="/services" className="hover:text-white transition">Services</Link>
+              <Link href="/about" className="hover:text-white transition">About</Link>
+              <Link href="/contact" className="hover:text-white transition">Contact</Link>              
+            </div>           
           </div>
         </div>
 
-        {/* CONSULTATION */}
+        {/* COL 3 — CONSULTATION */}
         <div className="flex md:justify-end">
           <div className="max-w-sm">
             <h4 className="font-semibold text-lg mb-6">Consultation</h4>
@@ -66,7 +58,6 @@ export default function Footer() {
             >
               Schedule Call
             </Link>
-
             <div className="mt-8">
               <p className="text-gray-500 text-xs mb-2">Email us directly</p>
               <a
@@ -81,18 +72,15 @@ export default function Footer() {
 
       </div>
 
-      {/* COPYRIGHT */}
-      <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
-        © 2026 ESSEMVEE Technology Services Limited. All rights reserved.
-      </div>
-      <div className="flex gap-4 text-sm text-gray-400">
-        <Link href="/terms" className="hover:text-white">
-          Terms & Conditions
-        </Link>
-
-        <Link href="/privacy-policy" className="hover:text-white">
-          Privacy Policy
-        </Link>
+      {/* COPYRIGHT + LEGAL */}
+      <div className="border-t border-gray-800 py-6 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <span>© 2026 ESSEMVEE Technology Services Limited. All rights reserved.</span>
+          <div className="flex gap-6">
+            <Link href="/terms" className="hover:text-white transition">Terms & Conditions</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
+          </div>
+        </div>
       </div>
 
     </footer>

@@ -50,7 +50,8 @@ export default function Header() {
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}
+            {navLink('/contact', 'Contact')}        
+            
           </nav>
 
           {/* MOBILE MENU BUTTON */}
@@ -77,7 +78,7 @@ export default function Header() {
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}
+            {navLink('/contact', 'Contact')}            
           </nav>
         </div>
       )}
