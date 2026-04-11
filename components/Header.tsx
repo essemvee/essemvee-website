@@ -10,7 +10,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLink = (href: string, label: string) => {
-    const isActive = pathname === href || pathname.startsWith(href + '/') && href !== '/';
+    const isActive = pathname === href;
     return (
       <Link
         href={href}
@@ -48,7 +48,8 @@ export default function Header() {
             {navLink('/', 'Home')}
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
-            {navLink('/contact', 'Contact')}ies')}
+            {navLink('/contact', 'Contact')}
+            {navLink('/case-studies', 'Case Studies')}
           </nav>
 
           <button
@@ -74,6 +75,7 @@ export default function Header() {
             {navLink('/services', 'Services')}
             {navLink('/about', 'About')}
             {navLink('/contact', 'Contact')}
+            {navLink('/case-studies', 'Case Studies')}
           </nav>
         </div>
       )}
