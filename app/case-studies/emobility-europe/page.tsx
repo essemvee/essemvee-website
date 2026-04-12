@@ -29,7 +29,7 @@ export default function EmobilityCaseStudy() {
             platform — and they passed their first enterprise security questionnaire on the first submission.
           </p>
           <p className="text-sm text-gray-500 mt-4 italic">
-            Client name and identifying details withheld at their request. References available during consultation.
+            
           </p>
         </div>
       </section>
@@ -252,7 +252,7 @@ export default function EmobilityCaseStudy() {
           </p>
           <div className="border-t border-gray-700 pt-4">
             <p className="font-semibold text-white">VP of Engineering</p>
-            <p className="text-gray-500 text-sm">E-Mobility SaaS · Central Europe · Name withheld on request</p>
+            <p className="text-gray-500 text-sm">E-Mobility SaaS · Central Europe · </p>
           </div>
         </div>
 

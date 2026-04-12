@@ -29,7 +29,7 @@ export default function EdtechCaseStudy() {
             a platform they could rely on.
           </p>
           <p className="text-sm text-gray-500 mt-4 italic">
-            Client name and identifying details withheld at their request. References available during consultation.
+            
           </p>
         </div>
       </section>
@@ -250,7 +250,7 @@ export default function EdtechCaseStudy() {
           </p>
           <div className="border-t border-gray-700 pt-4">
             <p className="font-semibold text-white">Founder & CEO</p>
-            <p className="text-gray-500 text-sm">Online Education Platform · South Asia · Name withheld on request</p>
+            <p className="text-gray-500 text-sm">Online Education Platform · South Asia · </p>
           </div>
         </div>
 
