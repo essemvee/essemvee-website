@@ -73,7 +73,7 @@ const team = [
     name: 'Mohammed Rizwan',
     initials: 'MR',
     photo: null,
-    roles: ['Lead Platform Engineer', 'Head of Terraform Cloud & DevOps Automation'],
+    roles: ['Lead Platform Engineer', 'Head of Cloud & DevOps Automation'],
     bio: 'Rizwan is ESSEMVEE\'s Lead Platform Engineer, specialising in Terraform Cloud, infrastructure automation, and DevOps engineering. He leads the design and implementation of cloud infrastructure-as-code frameworks, automated provisioning pipelines, and platform engineering solutions that give engineering teams reliable, repeatable, and scalable foundations.',
     bio2: 'At ESSEMVEE, Rizwan heads engagements where clients need to bring rigour and automation to their infrastructure management — moving from manual, error-prone provisioning to fully automated, policy-driven cloud operations using Terraform Cloud and modern DevOps tooling.',
     linkedin: 'https://www.linkedin.com/in/mohammed-rizwan-09a373203/',
