@@ -20,7 +20,7 @@ const team = [
     roles: ['CEO & Founder', 'Principal DevOps Consultant', 'Head of Engineering Delivery'],
     bio: 'Mohammed is the founder and driving force behind ESSEMVEE Technology Services. A Principal DevOps Consultant with deep expertise in cloud infrastructure, CI/CD automation, and platform engineering, he has led transformation programmes for organisations across FinTech, SaaS, and enterprise sectors in Ireland and beyond.',
     bio2: 'With a hands-on approach to every engagement, Mohammed combines technical depth with strong commercial acumen — ensuring every solution delivered is not just technically sound, but aligned with real business outcomes. Based in Dublin, he works directly with clients from first consultation through to delivery.',
-    linkedin: 'https://www.linkedin.com/in/mohammed-viquarahmed-1196501ba/',
+    
     accentBorder: 'border-blue-600',
     accentBadge: 'bg-blue-950 border-blue-700 text-blue-300',
     accentLink: 'border-blue-600 text-blue-400 hover:bg-blue-900/30',
@@ -34,7 +34,7 @@ const team = [
     roles: ['Lead Analytics Consultant', 'Head of MLOps', 'Head of Data & Business Intelligence'],
     bio: 'Moosa is ESSEMVEE\'s Lead Analytics Consultant and Head of MLOps — leading both the Business & Data Analysis practice and the firm\'s AI/MLOps engineering capability. He specialises in translating complex business objectives into structured KPI frameworks and production-grade ML pipelines that deliver measurable outcomes at scale.',
     bio2: 'With a strong background spanning data strategy, model governance, stakeholder alignment, and process optimisation, Moosa leads client engagements end-to-end — from analytics discovery and KPI design through to the operationalisation of AI systems in regulated and high-growth environments.',
-    linkedin: 'https://www.linkedin.com/in/moosashah-syed/',
+    
     accentBorder: 'border-teal-600',
     accentBadge: 'bg-teal-950 border-teal-700 text-teal-300',
     accentLink: 'border-teal-600 text-teal-400 hover:bg-teal-900/30',
@@ -48,7 +48,7 @@ const team = [
     roles: ['Lead DevOps Engineer', 'Head of Automation & CI/CD'],
     bio: 'Fazil is ESSEMVEE\'s Lead DevOps Engineer, bringing deep expertise in CI/CD pipeline architecture, infrastructure automation, GitOps workflows, and platform reliability engineering. He has a strong track record of helping engineering teams eliminate manual toil and ship faster with confidence.',
     bio2: 'At ESSEMVEE, Fazil leads automation-heavy client engagements and is the go-to specialist for organisations looking to overhaul their delivery pipelines, reduce deployment risk, and build SRE-grade reliability into their platforms.',
-    linkedin: 'https://www.linkedin.com/in/mohammed-fazil-33a78275/',
+    
     accentBorder: 'border-indigo-600',
     accentBadge: 'bg-indigo-950 border-indigo-700 text-indigo-300',
     accentLink: 'border-indigo-600 text-indigo-400 hover:bg-indigo-900/30',
@@ -62,7 +62,7 @@ const team = [
     roles: ['Lead Security Engineer', 'Head of DevSecOps'],
     bio: 'Eliyas is ESSEMVEE\'s Lead Security Engineer and head of the DevSecOps practice. He specialises in embedding security across the full software delivery lifecycle — from shift-left vulnerability scanning and policy-as-code to zero-trust architecture and compliance automation — without compromising developer velocity.',
     bio2: 'His work at ESSEMVEE is particularly focused on regulated industries, helping FinTech and healthcare clients achieve DORA, NIS2, and GDPR compliance readiness through security-first engineering practices designed to scale with the business.',
-    linkedin: 'https://www.linkedin.com/in/eliyas-ahmed-a0b20311b/',
+    
     accentBorder: 'border-cyan-600',
     accentBadge: 'bg-cyan-950 border-cyan-700 text-cyan-300',
     accentLink: 'border-cyan-600 text-cyan-400 hover:bg-cyan-900/30',
@@ -76,7 +76,7 @@ const team = [
     roles: ['Lead Platform Engineer', 'Head of Cloud & DevOps Automation'],
     bio: 'Rizwan is ESSEMVEE\'s Lead Platform Engineer, specialising in Terraform Cloud, infrastructure automation, and DevOps engineering. He leads the design and implementation of cloud infrastructure-as-code frameworks, automated provisioning pipelines, and platform engineering solutions that give engineering teams reliable, repeatable, and scalable foundations.',
     bio2: 'At ESSEMVEE, Rizwan heads engagements where clients need to bring rigour and automation to their infrastructure management — moving from manual, error-prone provisioning to fully automated, policy-driven cloud operations using Terraform Cloud and modern DevOps tooling.',
-    linkedin: 'https://www.linkedin.com/in/mohammed-rizwan-09a373203/',
+    
     accentBorder: 'border-purple-600',
     accentBadge: 'bg-purple-950 border-purple-700 text-purple-300',
     accentLink: 'border-purple-600 text-purple-400 hover:bg-purple-900/30',
