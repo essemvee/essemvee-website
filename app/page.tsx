@@ -45,25 +45,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= TECH LOGOS STRIP ================= */}
-      <section className="py-14 bg-[#050B1A] border-y border-gray-800">
-        <div className="max-w-4xl mx-auto px-6">          
-          <TechLogos logos={ALL_LOGOS} title="Technologies we engineer with" />
-        </div>
-      </section>
-
-      {/* ================= TRUSTED BY ================= */}
-      <section className="py-12 bg-black border-b border-gray-900">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-widest text-gray-500 mb-6">Trusted by engineering teams across</p>
-          <div className="flex flex-wrap justify-center gap-10">
-            {['FinTech', 'Healthcare SaaS', 'AI Scale-ups', 'Enterprise Data Platforms', 'eCommerce'].map((s) => (
-              <span key={s} className="text-base font-semibold text-gray-400 hover:text-gray-200 transition">{s}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ================= VALUE PROPOSITION ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -91,6 +72,18 @@ export default function HomePage() {
               <p className="text-gray-400 leading-relaxed">{desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ================= TRUSTED BY ================= */}
+      <section className="py-12 bg-black border-b border-gray-900">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-gray-500 mb-6">Trusted by engineering teams across</p>
+          <div className="flex flex-wrap justify-center gap-10">
+            {['FinTech', 'Healthcare SaaS', 'AI Scale-ups', 'Enterprise Data Platforms', 'eCommerce'].map((s) => (
+              <span key={s} className="text-base font-semibold text-gray-400 hover:text-gray-200 transition">{s}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -125,6 +118,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ================= TECH LOGOS STRIP ================= */}
+      <section className="py-14 bg-[#050B1A] border-y border-gray-800">
+        <div className="max-w-4xl mx-auto px-6">
+          <TechLogos logos={ALL_LOGOS} title="Technologies we engineer with" />
+        </div>
+      </section>
+
       {/* ================= PROVEN RESULTS ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -151,7 +152,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <CaseStudies />   {/* 👈 ADD HERE */}
+
+      <CaseStudies />
+
       {/* ================= TESTIMONIALS ================= */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
