@@ -1,9 +1,3 @@
-// ============================================================
-// FILE 2 of 4
-// SAVE AS: components/StructuredData.tsx
-// (sits alongside your existing CaseStudies.tsx, Header.tsx etc.)
-// ============================================================
-
 export default function StructuredData() {
   const schema = {
     "@context": "https://schema.org",
@@ -16,14 +10,11 @@ export default function StructuredData() {
         url: "https://www.essemvee.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.essemvee.com/branding/logo.png",
+          url: "https://www.essemvee.com/branding/logo/smv-color.png",
           width: 500,
           height: 500,
         },
         image: "https://www.essemvee.com/branding/og-image.png",
-        logo: {
-          url: 'https://www.essemvee.com/branding/logo/smv-color.png',  // ← update this to match your logo filename
-        }
         description:
           "ESSEMVEE Technology Services Limited is an Ireland-based global IT consultancy specialising in DevOps & Cloud Solutions, Software Development, Managed IT Support, and IT Consulting.",
         areaServed: { "@type": "Place", name: "Worldwide" },
@@ -40,11 +31,6 @@ export default function StructuredData() {
         },
         sameAs: [
           "https://www.linkedin.com/company/essemvee",
-          // Add as you create them:
-          // "https://twitter.com/essemvee",
-          // "https://www.facebook.com/essemvee",
-          // "https://www.instagram.com/essemvee",
-          // "https://www.crunchbase.com/organization/essemvee",
         ],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -65,7 +51,7 @@ export default function StructuredData() {
                 name: "Software Development",
                 description: "Custom web and enterprise application development tailored to your business needs.",
               },
- },
+            },
             {
               "@type": "Offer",
               itemOffered: {
