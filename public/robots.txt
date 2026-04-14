@@ -1,0 +1,12 @@
+# ============================================================
+# FILE 4 of 4
+# SAVE AS: public/robots.txt
+# ============================================================
+
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://www.essemvee.com/sitemap.xml
